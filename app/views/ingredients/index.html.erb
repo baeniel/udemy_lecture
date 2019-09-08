@@ -1,0 +1,9 @@
+<div class="container">
+  <h3 align="center">Available ingredients</h3> <br>
+
+  <% @ingredients.each do |ingredient| %>
+    <%= ingredient.name %>로 만들 수 있는 음식은????
+    <%= link_to "#{ingredient.recipes.count}개", ingredient %>
+    <br> <br> <br>
+  <% end %>
+</div>

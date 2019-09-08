@@ -2,7 +2,7 @@
 
   <div class="recipes mt-5 mb-3">
     <% @recipes.each do |recipe| %>
-      <%= recipe.name %>
+      <%= recipe.name %> <br>
     <% end %>
   </div>
   <%= paginate @recipes %>

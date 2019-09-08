@@ -1,0 +1,10 @@
+<div class="container">
+  <h3 align="center">Chef List!!!!</h3> <br>
+  <% @chefs.each do |chef| %>
+    <%= link_to "#{chef.chefname}", chef %> <br>
+  <% end %>
+
+
+  <%= link_to "레시피 만들기", new_recipe_path, class: "btn btn-primary" %>
+
+</div>

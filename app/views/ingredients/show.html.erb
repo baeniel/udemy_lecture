@@ -1,0 +1,10 @@
+<div class="container">
+  <h4 align="center">Recipe's containing <%= @ingredient.name %></h4>
+  <ul>
+    <% @ingredient.recipes.each do |recipe| %>
+      <li>
+        <%= recipe.name %> <br>
+      </li>
+    <% end %>
+  </ul>
+</div>

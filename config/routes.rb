@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  root 'recipes#index'
-  resource :recipes
+
+  root 'chefs#index'
+  resources :recipes do
+    resources :comments, only: [:create]
+  end
+  resources :chefs
+  resources :ingredients
 end

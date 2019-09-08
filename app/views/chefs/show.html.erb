@@ -1,0 +1,14 @@
+<div class="container">
+  <ul>
+    <% @chef.recipes.each do |recipe| %>
+      <li><%= link_to "#{recipe.name.capitalize}", recipe %></li>
+
+      <%= pluralize(recipe.ingredients.count, "ingredient") %>:
+      <% recipe.ingredients.each do |ingredient| %>
+        <%= ingredient.name %>
+      <% end %>
+      <br>
+    <% end %>
+    <br>
+  </ul>
+</div>

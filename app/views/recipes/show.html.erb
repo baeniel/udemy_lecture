@@ -1,2 +1,26 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<div class="container">
+  <%= @recipe.name %>
+  <br> <br>
+
+  <ul>
+    <% @comments.each do |comment| %>
+      <li><%= comment.body %></li>
+    <% end %>
+  </ul>
+
+  <br>
+
+  <h4 class="mt-5">댓글 입력하기!</h4>
+
+  <div class="form-group">
+    <%= form_for([@recipe, @comment]) do |f| %>
+      <%= f.text_field :body, class: "form-control mb-3" %>
+      <%= f.submit "댓글등록", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+
+
+
+
+</div>
