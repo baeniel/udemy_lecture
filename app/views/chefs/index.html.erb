@@ -1,7 +1,8 @@
+
 <div class="container">
   <h3 align="center">Chef List!!!!</h3> <br>
   <% @chefs.each do |chef| %>
-    <%= link_to "#{chef.chefname}", chef %> <br>
+    <%= link_to "#{chef.name}", chef %> <br>
   <% end %>
 
 
